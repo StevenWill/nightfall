@@ -22,10 +22,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('nightfall');
   });
 
-  it('should render title', () => {
+  it('should render title in header', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('nightfall app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Nightfall');
   });
 });
