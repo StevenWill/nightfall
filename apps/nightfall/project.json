@@ -77,11 +77,11 @@
       "executor": "@angular-devkit/build-angular:extract-i18n"
     },
     "test": {
-      "executor": "@angular-builders/jest:run",
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "tsConfig": "tsconfig.spec.json",
-        "rootDir": "apps/nightfall",
-        "zoneless": false
+        "jestConfig": "apps/nightfall/jest.config.js",
+        "tsConfig": "apps/nightfall/tsconfig.spec.json"
       }
     }
   }

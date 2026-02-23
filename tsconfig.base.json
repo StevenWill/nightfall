@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -18,7 +19,23 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": ["ES2022", "dom", "dom.iterable"]
+    "lib": ["ES2022", "dom", "dom.iterable"],
+    "paths": {
+      "@nightfall/auth/feature": ["libs/auth/feature/src/index.ts"],
+      "@nightfall/auth/data-access": ["libs/auth/data-access/src/index.ts"],
+      "@nightfall/auth/ui": ["libs/auth/ui/src/index.ts"],
+      "@nightfall/user-profile/feature": ["libs/user-profile/feature/src/index.ts"],
+      "@nightfall/user-profile/data-access": ["libs/user-profile/data-access/src/index.ts"],
+      "@nightfall/user-profile/ui": ["libs/user-profile/ui/src/index.ts"],
+      "@nightfall/investments/feature": ["libs/investments/feature/src/index.ts"],
+      "@nightfall/investments/data-access": ["libs/investments/data-access/src/index.ts"],
+      "@nightfall/investments/ui": ["libs/investments/ui/src/index.ts"],
+      "@nightfall/settings/feature": ["libs/settings/feature/src/index.ts"],
+      "@nightfall/settings/data-access": ["libs/settings/data-access/src/index.ts"],
+      "@nightfall/settings/ui": ["libs/settings/ui/src/index.ts"],
+      "@nightfall/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@nightfall/shared/util": ["libs/shared/util/src/index.ts"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

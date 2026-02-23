@@ -1,0 +1,21 @@
+{
+  "name": "investments-ui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/investments/ui/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:investments", "type:ui"],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/investments/ui/jest.config.cts",
+        "tsConfig": "libs/investments/ui/tsconfig.spec.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

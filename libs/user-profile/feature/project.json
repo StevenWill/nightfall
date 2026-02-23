@@ -1,0 +1,21 @@
+{
+  "name": "user-profile-feature",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/user-profile/feature/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:user-profile", "type:feature"],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/user-profile/feature/jest.config.cts",
+        "tsConfig": "libs/user-profile/feature/tsconfig.spec.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
