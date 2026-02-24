@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/types/testing';
 import { SettingsUi } from './settings-ui';
 
 describe('SettingsUi', () => {
