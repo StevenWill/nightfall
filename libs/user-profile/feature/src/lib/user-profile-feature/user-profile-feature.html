@@ -1,1 +1,3 @@
-<p>UserProfileFeature works!</p>
+@if (profile()) {
+<lib-user-profile-card [profile]="profile()!" />
+}

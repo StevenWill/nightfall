@@ -3,9 +3,42 @@
 
   <div class="dashboard-grid">
     <p-card class="dashboard-card">
-      <ng-template #title>Investments</ng-template>
+      <ng-template #title>Profile</ng-template>
+      <ng-template #subtitle>Your account details and preferences</ng-template>
       <ng-template #content>
-        <lib-investments-feature />
+        <div class="card-summary">
+          <i class="pi pi-user card-summary-icon"></i>
+          <p>View and manage your personal profile information.</p>
+        </div>
+      </ng-template>
+      <ng-template #footer>
+        <p-button
+          label="View Profile"
+          icon="pi pi-arrow-right"
+          iconPos="right"
+          [text]="true"
+          routerLink="/user-profile"
+        />
+      </ng-template>
+    </p-card>
+
+    <p-card class="dashboard-card">
+      <ng-template #title>Investments</ng-template>
+      <ng-template #subtitle>Your portfolio at a glance</ng-template>
+      <ng-template #content>
+        <div class="card-summary">
+          <i class="pi pi-chart-bar card-summary-icon"></i>
+          <p>Track and manage your investment portfolio.</p>
+        </div>
+      </ng-template>
+      <ng-template #footer>
+        <p-button
+          label="View Investments"
+          icon="pi pi-arrow-right"
+          iconPos="right"
+          [text]="true"
+          routerLink="/investments"
+        />
       </ng-template>
     </p-card>
   </div>

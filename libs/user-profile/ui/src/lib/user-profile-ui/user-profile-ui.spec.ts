@@ -1,16 +1,30 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { UserProfileUi } from './user-profile-ui';
+import { UserProfileCard, UserProfileItem } from './user-profile-ui';
 
-describe('UserProfileUi', () => {
-  let component: UserProfileUi;
-  let fixture: ComponentFixture<UserProfileUi>;
+const mockProfile: UserProfileItem = {
+  id: '1',
+  name: 'Test User',
+  email: 'test@example.com',
+  role: 'Developer',
+  department: 'Engineering',
+  location: 'London',
+  bio: 'A test bio.',
+  avatarInitials: 'TU',
+  joinDate: 'January 2024',
+  phone: '+1 555-0000',
+};
+
+describe('UserProfileCard', () => {
+  let component: UserProfileCard;
+  let fixture: ComponentFixture<UserProfileCard>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UserProfileUi],
+      imports: [UserProfileCard],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(UserProfileUi);
+    fixture = TestBed.createComponent(UserProfileCard);
+    fixture.componentRef.setInput('profile', mockProfile);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

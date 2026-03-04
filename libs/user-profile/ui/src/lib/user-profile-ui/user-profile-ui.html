@@ -1,1 +1,33 @@
-<p>UserProfileUi works!</p>
+<div class="profile-card">
+  <div class="profile-header">
+    <div class="profile-avatar">{{ profile().avatarInitials }}</div>
+    <div class="profile-headline">
+      <h2 class="profile-name">{{ profile().name }}</h2>
+      <p class="profile-role">{{ profile().role }}</p>
+      <p class="profile-department">{{ profile().department }}</p>
+    </div>
+  </div>
+
+  <div class="profile-bio">
+    <p>{{ profile().bio }}</p>
+  </div>
+
+  <ul class="profile-details">
+    <li>
+      <i class="pi pi-envelope"></i>
+      <span>{{ profile().email }}</span>
+    </li>
+    <li>
+      <i class="pi pi-phone"></i>
+      <span>{{ profile().phone }}</span>
+    </li>
+    <li>
+      <i class="pi pi-map-marker"></i>
+      <span>{{ profile().location }}</span>
+    </li>
+    <li>
+      <i class="pi pi-calendar"></i>
+      <span>Joined {{ profile().joinDate }}</span>
+    </li>
+  </ul>
+</div>

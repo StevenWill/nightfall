@@ -1,1 +1,2 @@
-export * from './lib/user-profile-data-access/user-profile-data-access';
+export * from './lib/models/user-profile.model';
+export * from './lib/user-profile.service';
