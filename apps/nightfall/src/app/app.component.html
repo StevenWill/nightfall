@@ -19,10 +19,12 @@
         severity="secondary"
         aria-label="Calendar"
       />
-      <p-avatar
-        image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
-        shape="circle"
-        size="normal"
+      <p-button
+        icon="pi pi-user"
+        [rounded]="true"
+        [text]="true"
+        severity="secondary"
+        aria-label="Profile"
       />
     </div>
   </header>
@@ -31,12 +33,6 @@
   <div class="app-body">
     <nav class="app-sidebar">
       <ul>
-        <li>
-          <a routerLink="/investments" routerLinkActive="active">
-            <i class="pi pi-chart-bar"></i>
-            <span>Investments</span>
-          </a>
-        </li>
         <li>
           <a routerLink="/dashboard" routerLinkActive="active">
             <i class="pi pi-home"></i>

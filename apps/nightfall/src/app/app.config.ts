@@ -8,6 +8,13 @@ import { routes } from './app.routes';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    providePrimeNG({ theme: { preset: Material } }),
+    providePrimeNG({
+      theme: {
+        preset: Material,
+        options: {
+          darkModeSelector: false,
+        },
+      },
+    }),
   ],
 };

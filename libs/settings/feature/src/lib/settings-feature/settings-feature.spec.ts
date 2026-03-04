@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/types/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SettingsFeature } from './settings-feature';
 
 describe('SettingsFeature', () => {

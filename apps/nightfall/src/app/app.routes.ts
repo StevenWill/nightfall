@@ -2,11 +2,9 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'investments',
+    path: 'dashboard',
     loadComponent: () =>
-      import('@nightfall/investments/feature').then(
-        (m) => m.InvestmentsFeature,
-      ),
+      import('./dashboard/dashboard').then((m) => m.Dashboard),
   },
-  { path: '', redirectTo: 'investments', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 ];
