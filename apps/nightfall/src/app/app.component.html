@@ -1,9 +1,53 @@
-<div class="app-container">
-  <header>
-    <h1>Nightfall</h1>
-    <nav>
-      <a routerLink="/investments">Investments</a>
-    </nav>
+<div class="app-shell">
+  <!-- Top Header -->
+  <header class="app-header">
+    <div class="header-brand">
+      <span class="brand-name">Nightfall</span>
+    </div>
+    <div class="header-actions">
+      <p-button
+        icon="pi pi-envelope"
+        [rounded]="true"
+        [text]="true"
+        severity="secondary"
+        aria-label="Messages"
+      />
+      <p-button
+        icon="pi pi-calendar"
+        [rounded]="true"
+        [text]="true"
+        severity="secondary"
+        aria-label="Calendar"
+      />
+      <p-avatar
+        image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+        shape="circle"
+        size="normal"
+      />
+    </div>
   </header>
-  <router-outlet></router-outlet>
+
+  <!-- Body: Sidebar + Content -->
+  <div class="app-body">
+    <nav class="app-sidebar">
+      <ul>
+        <li>
+          <a routerLink="/investments" routerLinkActive="active">
+            <i class="pi pi-chart-bar"></i>
+            <span>Investments</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard" routerLinkActive="active">
+            <i class="pi pi-home"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="app-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
 </div>

@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global resets and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--p-font-family, 'Roboto', sans-serif);
+  background: var(--p-surface-50);
+  color: var(--p-text-color);
+}
+
+/* PrimeIcons */
+@import 'primeicons/primeicons.css';

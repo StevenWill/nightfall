@@ -22,10 +22,12 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('nightfall');
   });
 
-  it('should render title in header', () => {
+  it('should render brand name in header', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Nightfall');
+    expect(compiled.querySelector('.brand-name')?.textContent).toContain(
+      'Nightfall',
+    );
   });
 });
