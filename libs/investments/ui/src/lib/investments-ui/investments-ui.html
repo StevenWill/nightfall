@@ -1,1 +1,19 @@
-<p>InvestmentsUi works!</p>
+<p-table [value]="investments()" [tableStyle]="{ 'min-width': '40rem' }">
+  <ng-template #header>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+    </tr>
+  </ng-template>
+  <ng-template #body let-investment>
+    <tr>
+      <td>{{ investment.name }}</td>
+      <td>{{ investment.value | currency }}</td>
+    </tr>
+  </ng-template>
+  <ng-template #emptymessage>
+    <tr>
+      <td colspan="2">No investments found.</td>
+    </tr>
+  </ng-template>
+</p-table>

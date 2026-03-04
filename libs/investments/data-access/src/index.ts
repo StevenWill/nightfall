@@ -1,1 +1,2 @@
-export * from './lib/investments-data-access/investments-data-access';
+export * from './lib/models/investment.model';
+export * from './lib/investments.service';

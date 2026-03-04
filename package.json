@@ -27,7 +27,7 @@
     "zone.js": "~0.15.0"
   },
   "lint-staged": {
-    "*.{ts,html}": [
+    "*.ts": [
       "eslint --fix"
     ],
     "*.{ts,html,scss,json,md}": [

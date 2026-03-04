@@ -3,6 +3,7 @@
   "name": "nightfall",
   "projectType": "application",
   "root": "apps/nightfall",
+  "tags": ["scope:app"],
   "generators": {
     "@schematics/angular:component": {
       "style": "scss"
@@ -17,9 +18,7 @@
         "outputPath": "dist/apps/nightfall",
         "index": "apps/nightfall/src/index.html",
         "browser": "apps/nightfall/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/nightfall/tsconfig.app.json",
         "assets": [
           "apps/nightfall/src/favicon.ico",
@@ -29,9 +28,7 @@
             "output": "assets"
           }
         ],
-        "styles": [
-          "apps/nightfall/src/styles.scss"
-        ],
+        "styles": ["apps/nightfall/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -57,9 +54,7 @@
         }
       },
       "defaultConfiguration": "production",
-      "outputs": [
-        "{options.outputPath}"
-      ]
+      "outputs": ["{options.outputPath}"]
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",

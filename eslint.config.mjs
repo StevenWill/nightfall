@@ -16,6 +16,8 @@ export default [
           enforceBuildableLibDependency: true,
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
           depConstraints: [
+            // app shell can import from any library
+            { sourceTag: 'scope:app', onlyDependOnLibsWithTags: ['type:feature', 'type:data-access', 'type:ui', 'type:util'] },
             // --- Type constraints ---
             // feature libs can use data-access, ui, util (and other feature libs within the same scope)
             { sourceTag: 'type:feature', onlyDependOnLibsWithTags: ['type:feature', 'type:data-access', 'type:ui', 'type:util'] },
