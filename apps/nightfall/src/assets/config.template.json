@@ -1,0 +1,9 @@
+{
+  "tenantId": "your-tenant-id",
+  "tenantName": "Your Tenant Name",
+  "apiBaseUrl": "https://your-api-url/api",
+  "features": {
+    "investments": true,
+    "userProfile": true
+  }
+}

@@ -53,3 +53,7 @@ Thumbs.db
 .nx/workspace-data
 
 .angular
+
+# Runtime config — each environment/tenant provides their own.
+# Copy config.template.json → config.json to get started locally.
+apps/nightfall/src/assets/config.json
