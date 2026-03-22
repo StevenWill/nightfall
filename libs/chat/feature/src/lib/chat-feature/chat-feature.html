@@ -1,0 +1,13 @@
+<div class="chat-page">
+  <header class="chat-header">
+    <i class="pi pi-comments"></i>
+    <h2>Chat</h2>
+  </header>
+
+  <div class="chat-body">
+    <lib-chat-window
+      [messages]="messages()"
+      (messageSent)="onMessageSent($event)"
+    />
+  </div>
+</div>

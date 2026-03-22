@@ -41,5 +41,25 @@
         />
       </ng-template>
     </p-card>
+
+    <p-card class="dashboard-card">
+      <ng-template #title>Messages</ng-template>
+      <ng-template #subtitle>Real-time chat powered by FCM</ng-template>
+      <ng-template #content>
+        <div class="card-summary">
+          <i class="pi pi-comments card-summary-icon"></i>
+          <p>Send and receive messages in real time.</p>
+        </div>
+      </ng-template>
+      <ng-template #footer>
+        <p-button
+          label="Open Messages"
+          icon="pi pi-arrow-right"
+          iconPos="right"
+          [text]="true"
+          routerLink="/messages"
+        />
+      </ng-template>
+    </p-card>
   </div>
 </div>

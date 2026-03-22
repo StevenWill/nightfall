@@ -20,5 +20,15 @@ export const routes: Routes = [
         (m) => m.UserProfileFeature,
       ),
   },
+  {
+    path: 'messages',
+    loadComponent: () =>
+      import('@nightfall/messaging/feature').then((m) => m.MessagingFeature),
+  },
+  {
+    path: 'chat',
+    loadComponent: () =>
+      import('@nightfall/chat/feature').then((m) => m.ChatFeature),
+  },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 ];

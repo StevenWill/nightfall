@@ -1,0 +1,40 @@
+<div class="chat-window">
+  <!-- Message list -->
+  <div class="chat-messages">
+    @for (msg of messages(); track msg.id) {
+    <div class="chat-bubble-row" [class.self]="msg.isSelf">
+      <div class="chat-bubble" [class.self]="msg.isSelf">
+        @if (!msg.isSelf) {
+        <span class="chat-sender">{{ msg.senderName }}</span>
+        }
+        <p class="chat-text">{{ msg.text }}</p>
+        <time class="chat-time">{{ msg.sentAt | date: 'shortTime' }}</time>
+      </div>
+    </div>
+    } @if (messages().length === 0) {
+    <p class="chat-empty">No messages yet. Say hello!</p>
+    }
+
+    <div #messagesEnd></div>
+  </div>
+
+  <!-- Input row -->
+  <div class="chat-input-row">
+    <input
+      pInputText
+      type="text"
+      class="chat-input"
+      placeholder="Type a message…"
+      [ngModel]="draft()"
+      (ngModelChange)="draft.set($event)"
+      (keydown)="onKeyDown($event)"
+    />
+    <p-button
+      icon="pi pi-send"
+      [rounded]="true"
+      [text]="true"
+      aria-label="Send"
+      (onClick)="send()"
+    />
+  </div>
+</div>
