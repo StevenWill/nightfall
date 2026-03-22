@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CardModule } from 'primeng/card';
-import { ButtonModule } from 'primeng/button';
+import { Card } from 'primeng/card';
+import { Button } from 'primeng/button';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [RouterLink, CardModule, ButtonModule],
+  imports: [RouterLink, Card, Button],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
 })
