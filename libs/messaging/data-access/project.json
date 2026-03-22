@@ -1,0 +1,21 @@
+{
+  "name": "messaging-data-access",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/messaging/data-access/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:messaging", "type:data-access"],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/messaging/data-access/jest.config.cts",
+        "tsConfig": "libs/messaging/data-access/tsconfig.spec.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

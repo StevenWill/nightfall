@@ -1,0 +1,27 @@
+<div class="notification-list">
+  <div class="notification-messages">
+    @for (msg of messages(); track msg.id) {
+    <div class="notification-item">
+      <div class="notification-header">
+        <span class="notification-sender">{{ msg.senderName }}</span>
+        <span
+          class="notification-channel pi"
+          [class.pi-envelope]="msg.channel === 'in-app'"
+          [class.pi-mobile]="msg.channel === 'sms'"
+          [class.pi-bell]="msg.channel === 'push'"
+          [title]="msg.channel"
+        >
+        </span>
+      </div>
+      <p class="notification-preview">{{ msg.preview }}</p>
+      <time class="notification-time"
+        >{{ msg.sentAt | date: 'shortTime' }}</time
+      >
+    </div>
+    } @if (messages().length === 0) {
+    <p class="notification-empty">No messages yet.</p>
+    }
+
+    <div #messagesEnd></div>
+  </div>
+</div>
