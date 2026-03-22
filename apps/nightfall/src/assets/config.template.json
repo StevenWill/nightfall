@@ -2,8 +2,20 @@
   "tenantId": "your-tenant-id",
   "tenantName": "Your Tenant Name",
   "apiBaseUrl": "https://your-api-url/api",
+  "firebase": {
+    "apiKey": "your-firebase-api-key",
+    "authDomain": "your-project.firebaseapp.com",
+    "projectId": "your-firebase-project-id",
+    "storageBucket": "your-project.appspot.com",
+    "messagingSenderId": "000000000000",
+    "appId": "1:000000000000:web:xxxxxxxxxxxxxxxxxxxxxxxx",
+    "measurementId": "G-XXXXXXXXXX",
+    "vapidKey": "your-vapid-key-from-firebase-console"
+  },
   "features": {
     "investments": true,
-    "userProfile": true
+    "userProfile": true,
+    "fcmMessaging": true,
+    "llmChatbot": false
   }
 }

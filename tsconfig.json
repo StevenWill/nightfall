@@ -4,6 +4,13 @@
   "include": [],
   "references": [
     { "path": "./apps/nightfall/tsconfig.app.json" },
-    { "path": "./apps/nightfall/tsconfig.spec.json" }
+    { "path": "./apps/nightfall/tsconfig.spec.json" },
+    { "path": "./libs/messaging/data-access/tsconfig.lib.json" },
+    { "path": "./libs/messaging/ui/tsconfig.lib.json" },
+    { "path": "./libs/messaging/feature/tsconfig.lib.json" },
+    { "path": "./libs/shared/data-access-firebase/tsconfig.lib.json" },
+    { "path": "./libs/chat/data-access/tsconfig.lib.json" },
+    { "path": "./libs/chat/ui/tsconfig.lib.json" },
+    { "path": "./libs/chat/feature/tsconfig.lib.json" }
   ]
 }
