@@ -23,6 +23,11 @@
         "assets": [
           "apps/nightfall/src/favicon.ico",
           {
+            "glob": "firebase-messaging-sw.js",
+            "input": "apps/nightfall/src",
+            "output": "/"
+          },
+          {
             "glob": "**/*",
             "input": "apps/nightfall/src/assets",
             "output": "assets"

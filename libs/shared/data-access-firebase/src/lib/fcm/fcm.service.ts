@@ -163,14 +163,50 @@ export class FcmService {
   private mapPayloadToMessage(payload: MessagePayload): FcmMessage {
     const data = (payload.data ?? {}) as Record<string, unknown>;
     const topicId = (data['topicId'] as TopicId | undefined) ?? 'system-alerts';
+
     const sentAt =
       (data['sentAt'] as string | undefined) ?? new Date().toISOString();
     const correlationId = data['correlationId'] as string | undefined;
 
     const base: FcmMessageBase = { topicId, sentAt, correlationId };
 
-    // Delegate to the registered topic handler or fall back to GenericFcmMessage
-    const generic: GenericFcmMessage = { ...base, topicId, data };
-    return generic as FcmMessage;
+    switch (topicId) {
+      case 'messaging':
+        return {
+          ...base,
+          topicId: 'messaging',
+          senderId: (data['senderId'] as string | undefined) ?? '',
+          senderName: (data['senderName'] as string | undefined) ?? '',
+          preview: (data['preview'] as string | undefined) ?? '',
+          threadId:
+            (data['threadId'] as string | undefined) ?? crypto.randomUUID(),
+          channel:
+            (data['channel'] as 'in-app' | 'sms' | 'push' | undefined) ??
+            'in-app',
+        };
+      case 'chat':
+        return {
+          ...base,
+          topicId: 'chat',
+          senderId: (data['senderId'] as string | undefined) ?? '',
+          senderName: (data['senderName'] as string | undefined) ?? '',
+          text: (data['text'] as string | undefined) ?? '',
+          conversationId: (data['conversationId'] as string | undefined) ?? '',
+        };
+      case 'system-alerts':
+        return {
+          ...base,
+          topicId: 'system-alerts',
+          severity:
+            (data['severity'] as 'info' | 'warning' | 'critical' | undefined) ??
+            'info',
+          title: (data['title'] as string | undefined) ?? '',
+          body: (data['body'] as string | undefined) ?? '',
+        };
+      default: {
+        const generic: GenericFcmMessage = { ...base, topicId, data };
+        return generic as FcmMessage;
+      }
+    }
   }
 }
