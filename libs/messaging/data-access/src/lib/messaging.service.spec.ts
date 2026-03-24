@@ -5,7 +5,7 @@ import {
   MessagingMessage,
   FcmMessage,
 } from '@nightfall/shared/data-access-firebase';
-import { MessagingService } from './chat.service';
+import { MessagingService } from './messaging.service';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Helpers
